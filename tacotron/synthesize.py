@@ -69,12 +69,12 @@ def run_eval(args, checkpoint_path, output_dir, hparams, sentences):
 def run_synthesis(args, checkpoint_path, output_dir, hparams):
 	GTA = (args.GTA == 'True')
 	if GTA:
-		synth_dir = os.path.join(base_dir, output_dir, 'gta')
+		synth_dir = os.path.join(args.base_dir, output_dir, 'gta')
 
 		#Create output path if it doesn't exist
 		os.makedirs(synth_dir, exist_ok=True)
 	else:
-		synth_dir = os.path.join(base_dir, output_dir, 'natural')
+		synth_dir = os.path.join(args.base_dir, output_dir, 'natural')
 
 		#Create output path if it doesn't exist
 		os.makedirs(synth_dir, exist_ok=True)
