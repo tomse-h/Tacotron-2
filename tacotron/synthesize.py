@@ -91,8 +91,8 @@ def run_synthesis(args, checkpoint_path, output_dir, hparams):
 		log('Loaded metadata for {} examples ({:.2f} hours)'.format(len(metadata), hours))
 
 	log('starting synthesis')
-	mel_dir = os.path.join(args.input_dir, 'mels')
-	wav_dir = os.path.join(args.input_dir, 'audio')
+	mel_dir = os.path.join(args.base_dir, args.input_dir, 'mels')
+	wav_dir = os.path.join(args.base_dir, args.input_dir, 'audio')
 	with open(os.path.join(synth_dir, 'map.txt'), 'w') as file:
 		for i, meta in enumerate(tqdm(metadata)):
 			text = meta[5]
