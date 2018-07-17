@@ -75,7 +75,7 @@ def train(args, log_dir, hparams):
 		log('###########################################################\n')
 		checkpoint = wavenet_train(args, log_dir, hparams, input_path)
 		if checkpoint is None:
-			raise ('Error occured while training Wavenet, Exiting!')
+			raise ('Error occured while training Wavenet, Exiting now!')
 		wave_state = 1
 		save_seq(state_file, [taco_state, GTA_state, wave_state], input_path)
 
