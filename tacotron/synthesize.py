@@ -33,7 +33,7 @@ def run_live(args, checkpoint_path, hparams):
 			generate_fast(synth, text)
 
 		except KeyboardInterrupt:
-			leave = 'Thank you for testing our features. see you soon.'
+			leave = 'Thank you for testing our features. see you soon.' 
 			log(leave)
 			generate_fast(synth, leave)
 			sleep(2)
